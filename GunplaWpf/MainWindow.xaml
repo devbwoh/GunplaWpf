@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GunplaWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Mechanic" Height="450" Width="800">
+    <DockPanel>
+        <DataGrid 
+            x:Name="grid"
+            ItemsSource="{Binding}"
+            DockPanel.Dock="Top">
+            
+        </DataGrid>
+    </DockPanel>
 </Window>
