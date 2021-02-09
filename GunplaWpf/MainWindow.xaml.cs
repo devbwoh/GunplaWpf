@@ -20,6 +20,15 @@ namespace GunplaWpf {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+
+            GunplaRepository db = new GunplaRepository();
+
+            string error = db.Connect();
+
+            if (error != null)
+                MessageBox.Show(error);
+            else
+                MessageBox.Show("MySQL 접속 성공");
         }
     }
 }
