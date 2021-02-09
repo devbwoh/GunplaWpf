@@ -22,17 +22,17 @@ namespace GunplaWpf {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
 
+        private void OnAdd(object sender, RoutedEventArgs e) {
             GunplaRepository db = new GunplaRepository();
 
             string error = db.Connect();
-
             if (error != null)
                 MessageBox.Show(error);
-            else
-                MessageBox.Show("MySQL 접속 성공");
+            //else
+            //    MessageBox.Show("MySQL 접속 성공");
 
-            
             grid.DataContext = db.Mechanic();
         }
     }
