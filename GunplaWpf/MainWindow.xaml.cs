@@ -42,6 +42,9 @@ namespace GunplaWpf {
                 return;
 
             db.Insert(m.NameMechanic, m.Model, m.Manufacturer, m.Armor, m.HeightMechanic, m.Weight);
+
+            // 출력 데이터 변경
+            grid.DataContext = db.Mechanic();
         }
     }
 }
