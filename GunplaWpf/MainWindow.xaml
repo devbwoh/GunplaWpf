@@ -12,10 +12,16 @@
             Content="데이터베이스 접속"
             Margin="10"
             Padding="10"
+            DockPanel.Dock="Bottom" Click="OnConnect"/>
+        <Button 
+            x:Name="btnAdd"
+            Content="데이터 추가"
+            Margin="10"
+            Padding="10"
             DockPanel.Dock="Bottom" Click="OnAdd"/>
         <DataGrid 
             x:Name="grid"
-            ItemsSource="{Binding}"
+            ItemsSource="{ Binding }"
             DockPanel.Dock="Top">
         </DataGrid>
     </DockPanel>

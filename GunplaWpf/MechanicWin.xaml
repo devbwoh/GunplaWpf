@@ -1,0 +1,32 @@
+﻿<Window x:Class="GunplaWpf.MechanicWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GunplaWpf"
+        mc:Ignorable="d"
+        Title="정보 입력" Height="350" Width="250"
+        ResizeMode="NoResize">
+    <DockPanel>
+        <UniformGrid DockPanel.Dock="Bottom" Rows="1">
+            <Button Margin="8" Padding="8" Click="OnInsert">추가</Button>
+            <Button Margin="8" Padding="8" Click="OnCancel">취소</Button>
+        </UniformGrid>
+        <GroupBox DockPanel.Dock="Top" Header="Mechanic" Margin="8" Padding="8">
+            <StackPanel>
+            <TextBlock>Name</TextBlock>
+            <TextBox x:Name="name"/>
+            <TextBlock>Model</TextBlock>
+            <TextBox x:Name="model"/>
+            <TextBlock>Manufacturer</TextBlock>
+            <TextBox x:Name="manufacturer"/>
+            <TextBlock>Armor</TextBlock>
+            <TextBox x:Name="armor"/>
+            <TextBlock>Height</TextBlock>
+            <TextBox x:Name="height"/>
+            <TextBlock>Weight</TextBlock>
+            <TextBox x:Name="weight"/>
+        </StackPanel>
+        </GroupBox>
+    </DockPanel>
+</Window>
